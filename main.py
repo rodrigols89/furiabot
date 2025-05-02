@@ -3,10 +3,12 @@ from __future__ import annotations
 import os
 
 from dotenv import load_dotenv
-from handlers.menu import send_menu_handler
-from handlers.news import get_news_handler
-from handlers.nextgames import get_next_games_handler
 from telegram.ext import ApplicationBuilder, MessageHandler, filters
+
+from furiabot.bot.handlers.menu import send_menu_handler
+from furiabot.bot.handlers.news import get_news_handler
+from furiabot.bot.handlers.nextgames import get_next_games_handler
+
 
 # Load the environment variables from .env.
 load_dotenv()
