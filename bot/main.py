@@ -1,26 +1,35 @@
-import os
-from dotenv import load_dotenv
-from telegram.ext import ApplicationBuilder
-from handlers.start import get_start_handler
-from handlers.noticias import get_noticias_handler
+from __future__ import annotations
 
-# Carrega o .env
+import os
+
+from dotenv import load_dotenv
+from handlers.menu import send_menu_handler
+from handlers.news import get_news_handler
+from handlers.nextgames import get_next_games_handler
+from telegram.ext import ApplicationBuilder, MessageHandler, filters
+
+# Load the environment variables from .env.
 load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
-# Inicia o bot
+
+# Start the bot.
 def main():
     if not TELEGRAM_TOKEN:
         raise ValueError("TELEGRAM_TOKEN não encontrado no arquivo .env")
 
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
 
-    # Adiciona os handlers para /start e /noticias
-    app.add_handler(get_start_handler())
-    app.add_handler(get_noticias_handler())
+    # Add handlers.
+    app.add_handler(get_news_handler())
+    app.add_handler(get_next_games_handler())
 
-    print("🤖 Bot rodando... Envie /start ou /noticias no Telegram.")
+    # Adicionando o handler de mensagens gerais
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, send_menu_handler))
+
+    print("🤖 Bot rodando... Envie comandos no Telegram.")
     app.run_polling()
+
 
 if __name__ == "__main__":
     main()
