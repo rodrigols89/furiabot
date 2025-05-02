@@ -13,3 +13,6 @@ lint:
 check:
 	black . --check
 	ruff check .
+
+addfuture:
+	isort . --add-import 'from __future__ import annotations'
