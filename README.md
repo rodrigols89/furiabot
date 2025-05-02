@@ -3,6 +3,7 @@
 ## Conteúdo
 
  - [Configuração](#settings)
+ - [Teck Stack](#teck-stack)
 
 ---
 
@@ -45,6 +46,22 @@ pip freeze > requirements.txt --require-virtualenv
 
 
 
+
+---
+
+<div id="teck-stack"></div>
+
+## Teck Stack
+
+ - **Automação:**
+   - [python-telegram-bot](https://python-telegram-bot.org/)
+   - [python-dotenv](https://pypi.org/project/python-dotenv/)
+ - **Formatação e Linter:**
+   - [black](https://black.readthedocs.io/en/stable/)
+   - [ruff](https://beta.ruff.rs/docs/)
+   - [isort](https://pycqa.github.io/isort/)
+ - **Testes:**
+   - [pytest](https://docs.pytest.org/en/latest/)
 
 ---
 
