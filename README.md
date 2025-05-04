@@ -210,9 +210,9 @@ furiabot/
 ├── .gitignore                    # Arquivo com configurações para arquivos ignorados
 ├── main.py                       # Ponto de entrada principal do bot
 ├── Makefile                      # Comando úteis para formatar e corrigir os códigos
-├── README.md                 # Documentação do projeto
-├── requirements.txt           # Lista de dependências do projeto
-└── start-furiabot.sh          # Script para iniciar o bot automaticamente ao reiniciar a VPS
+├── README.md                     # Documentação do projeto
+├── requirements.txt              # Lista de dependências do projeto
+└── start-furiabot.sh             # Script para iniciar o bot automaticamente ao reiniciar a VPS
 ```
 
 
@@ -239,7 +239,7 @@ O projeto [FuriaBot](https://t.me/furiagg2025_bot) foi desenvolvido com as segui
  - **[Makefile](https://www.gnu.org/software/make/)** — Automação de tarefas comuns como lint, formatação e checagem de código.
  - **[Ruff](https://docs.astral.sh/ruff/)** e **[Black](https://black.readthedocs.io/)** — Ferramentas para lint e formatação automática do código Python.
  - **[isort](https://pycqa.github.io/isort/)** — Organização automática das importações.
- - **Git e GitHub** — Controle de versão e hospedagem do repositório.
+ - [Git](https://git-scm.com/) e [GitHub](https://github.com/) — Controle de versão e hospedagem do repositório.
 
 ---
 
