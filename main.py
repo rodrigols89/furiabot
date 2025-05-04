@@ -9,7 +9,6 @@ from furiabot.bot.handlers.menu import send_menu_handler
 from furiabot.bot.handlers.news import get_news_handler
 from furiabot.bot.handlers.nextgames import get_next_games_handler
 
-
 # Load the environment variables from .env.
 load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
