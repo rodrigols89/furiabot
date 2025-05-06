@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 from telegram import Update
-from telegram.ext import ContextTypes
+from telegram.ext import CommandHandler, ContextTypes
 
 
-# Função que responde com o menu de comandos
-async def send_menu_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+# Função principal do handler /proximosjogos
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     msg = (
         "Olá, bem-vindo ao FuriaBot 🔥 Como posso ajudar você a acompanhar o time?\n\n"
         "Aqui estão os comandos disponíveis:\n\n"
@@ -13,3 +13,8 @@ async def send_menu_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         "/proximosjogos - Veja os próximos jogos da FURIA.\n"
     )
     await update.message.reply_text(msg)
+
+
+# Função para registrar o handler no bot
+def start_handler() -> CommandHandler:
+    return CommandHandler("start", start)
